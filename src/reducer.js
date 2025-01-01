@@ -25,7 +25,7 @@ const financeReducer = (state = initialState, action) => {
       if (action.payload.entryType === "income") {
         return {
           ...state,
-          income: [...state, action.payload],
+          income: [...state.income, action.payload],
         };
       } else {
         return {
